@@ -1,0 +1,25 @@
+@mixin bGSU() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin qC() {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+@mixin tLC() {
+  display: grid;
+  place-items: center;
+}
+
+@mixin removeOverflow() {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin customCursor() {
+  cursor: url("http://basicallyeasy.com/NextJSCDNS/jotopia/clipart/arrow.gif"),
+    pointer;
+}

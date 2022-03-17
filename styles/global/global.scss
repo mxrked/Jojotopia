@@ -1,0 +1,421 @@
+//! Resets
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.row > * {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+html {
+  cursor: url("http://basicallyeasy.com/NextJSCDNS/jotopia/clipart/arrow.gif"),
+    crosshair;
+  visibility: visible;
+  opacity: 1;
+}
+
+//! Special Classes
+.deactive {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.page-transition {
+  transition: 0.3s ease-in-out;
+}
+
+.full-second {
+  transition: 1s ease-in-out;
+}
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 500ms 300ms, -webkit-filter 500ms 300ms;
+}
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}
+
+//! Overrides
+//? Home
+.overrides_Home {
+  .overrides_Products {
+    .overrides_ProductsCnt {
+      .slick-slide {
+        position: relative;
+        pointer-events: none;
+        opacity: 0.5;
+        transform: scale(0.9) perspective(9cm) rotateX(0deg) rotateY(7deg)
+          translateY(40px);
+        filter: blur(2px);
+        transition: 0.5s ease-in-out;
+      }
+
+      .slick-center {
+        pointer-events: auto;
+        opacity: 1 !important;
+        transform: scale(1);
+        filter: blur(0px);
+      }
+
+      .slick-dots {
+        position: relative;
+        bottom: -10px !important;
+        z-index: 100 !important;
+
+        li {
+          margin: 10px !important;
+          button {
+            cursor: url("http://basicallyeasy.com/NextJSCDNS/jotopia/clipart/arrow.gif"),
+              pointer;
+
+            &::before {
+              color: #992c9d;
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .overrides_Info {
+    .slick-slider {
+      position: absolute;
+      width: 100%;
+    }
+  }
+}
+
+//! Overrides Responsive
+@media all and (max-width: 1995px) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 500px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 200px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media all and (max-width: 768px) {
+}
+
+/*! Pixel 2 XL */
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 500px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+/*! Ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 200px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 200px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+/*! iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 200px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  //? Home
+  .overrides_Home {
+    .overrides_Products {
+      .overrides_ProductsCnt {
+        .slick-slide {
+          pointer-events: auto;
+          opacity: 1;
+          transform: scale(1);
+          filter: none;
+        }
+
+        .slick-center {
+          opacity: 1;
+        }
+
+        .slick-dots {
+          display: flex !important;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 500px !important;
+          margin: auto !important;
+        }
+      }
+    }
+  }
+}
+
+/*! Laptops */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}

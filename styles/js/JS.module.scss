@@ -1,0 +1,119 @@
+@import "../assets/colors/Colors.scss";
+@import "../assets/fonts/Fonts.scss";
+@import "../assets/mixins/Mixins.scss";
+
+//! Non Responsive
+//? B2T
+.backToTop {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  @include tLC;
+  right: 30px;
+  bottom: 30px;
+  overflow: hidden;
+  z-index: 300;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: url("http://basicallyeasy.com/NextJSCDNS/jotopia/clipart/arrow.gif"),
+    pointer !important;
+
+  &:hover {
+    img {
+      -webkit-filter: brightness(60%) drop-shadow(0 3px 1px black);
+      filter: brightness(60%) drop-shadow(0 3px 1px black);
+    }
+  }
+
+  img {
+    max-width: 100%;
+    filter: drop-shadow(0 3px 1px black);
+  }
+}
+
+//? Confirmed Purchase & Sent Successfully
+.confirmed_purchase,
+.sent_successfully {
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $VividViolet;
+  font-family: $P;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+  z-index: 701;
+
+  span {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px !important;
+  }
+}
+
+//! Responsive
+@media all and (max-width: 1995px) {
+}
+
+@media all and (max-width: 991px) {
+  //? B2T
+  .backToTop {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+
+    &:hover {
+      img {
+        filter: drop-shadow(0 3px 1px black);
+      }
+    }
+
+    img {
+      filter: drop-shadow(0 3px 1px black);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media all and (max-width: 768px) {
+}
+
+/*! Pixel 2 XL */
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  //? B2T
+  .backToTop {
+    width: 50px;
+    height: 50px;
+    right: 10px;
+  }
+}
+
+/*! Ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  //? B2T
+  .backToTop {
+    width: 60px;
+    height: 60px;
+    right: 10px;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/*! iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/*! Laptops */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}
